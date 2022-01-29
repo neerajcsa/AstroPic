@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B5549B9027A51C1C005C8A8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5549B8F27A51C1C005C8A8B /* AppDelegate.swift */; };
+		B5549B9227A51C1C005C8A8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5549B9127A51C1C005C8A8B /* SceneDelegate.swift */; };
+		B5549B9927A51C1D005C8A8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5549B9827A51C1D005C8A8B /* Assets.xcassets */; };
+		B5549B9C27A51C1D005C8A8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5549B9A27A51C1D005C8A8B /* LaunchScreen.storyboard */; };
+		B5549BA727A51C1E005C8A8B /* AstroPic_WalETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5549BA627A51C1E005C8A8B /* AstroPic_WalETests.swift */; };
+		B5549BB227A51C1E005C8A8B /* AstroPic_WalEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5549BB127A51C1E005C8A8B /* AstroPic_WalEUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5549BA327A51C1E005C8A8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5549B8427A51C1C005C8A8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5549B8B27A51C1C005C8A8B;
+			remoteInfo = "AstroPic-WalE";
+		};
+		B5549BAE27A51C1E005C8A8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5549B8427A51C1C005C8A8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5549B8B27A51C1C005C8A8B;
+			remoteInfo = "AstroPic-WalE";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B5549B8C27A51C1C005C8A8B /* AstroPic-WalE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AstroPic-WalE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5549B8F27A51C1C005C8A8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B5549B9127A51C1C005C8A8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B5549B9827A51C1D005C8A8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5549B9B27A51C1D005C8A8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B5549B9D27A51C1D005C8A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5549BA227A51C1E005C8A8B /* AstroPic-WalETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AstroPic-WalETests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5549BA627A51C1E005C8A8B /* AstroPic_WalETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPic_WalETests.swift; sourceTree = "<group>"; };
+		B5549BA827A51C1E005C8A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5549BAD27A51C1E005C8A8B /* AstroPic-WalEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AstroPic-WalEUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5549BB127A51C1E005C8A8B /* AstroPic_WalEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPic_WalEUITests.swift; sourceTree = "<group>"; };
+		B5549BB327A51C1E005C8A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5549B8927A51C1C005C8A8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5549B9F27A51C1E005C8A8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5549BAA27A51C1E005C8A8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B5549B8327A51C1C005C8A8B = {
+			isa = PBXGroup;
+			children = (
+				B5549B8E27A51C1C005C8A8B /* AstroPic-WalE */,
+				B5549BA527A51C1E005C8A8B /* AstroPic-WalETests */,
+				B5549BB027A51C1E005C8A8B /* AstroPic-WalEUITests */,
+				B5549B8D27A51C1C005C8A8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B5549B8D27A51C1C005C8A8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5549B8C27A51C1C005C8A8B /* AstroPic-WalE.app */,
+				B5549BA227A51C1E005C8A8B /* AstroPic-WalETests.xctest */,
+				B5549BAD27A51C1E005C8A8B /* AstroPic-WalEUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5549B8E27A51C1C005C8A8B /* AstroPic-WalE */ = {
+			isa = PBXGroup;
+			children = (
+				B5549B8F27A51C1C005C8A8B /* AppDelegate.swift */,
+				B5549B9127A51C1C005C8A8B /* SceneDelegate.swift */,
+				B5549B9827A51C1D005C8A8B /* Assets.xcassets */,
+				B5549B9A27A51C1D005C8A8B /* LaunchScreen.storyboard */,
+				B5549B9D27A51C1D005C8A8B /* Info.plist */,
+			);
+			path = "AstroPic-WalE";
+			sourceTree = "<group>";
+		};
+		B5549BA527A51C1E005C8A8B /* AstroPic-WalETests */ = {
+			isa = PBXGroup;
+			children = (
+				B5549BA627A51C1E005C8A8B /* AstroPic_WalETests.swift */,
+				B5549BA827A51C1E005C8A8B /* Info.plist */,
+			);
+			path = "AstroPic-WalETests";
+			sourceTree = "<group>";
+		};
+		B5549BB027A51C1E005C8A8B /* AstroPic-WalEUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B5549BB127A51C1E005C8A8B /* AstroPic_WalEUITests.swift */,
+				B5549BB327A51C1E005C8A8B /* Info.plist */,
+			);
+			path = "AstroPic-WalEUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5549B8B27A51C1C005C8A8B /* AstroPic-WalE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5549BB627A51C1E005C8A8B /* Build configuration list for PBXNativeTarget "AstroPic-WalE" */;
+			buildPhases = (
+				B5549B8827A51C1C005C8A8B /* Sources */,
+				B5549B8927A51C1C005C8A8B /* Frameworks */,
+				B5549B8A27A51C1C005C8A8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AstroPic-WalE";
+			productName = "AstroPic-WalE";
+			productReference = B5549B8C27A51C1C005C8A8B /* AstroPic-WalE.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B5549BA127A51C1E005C8A8B /* AstroPic-WalETests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5549BB927A51C1E005C8A8B /* Build configuration list for PBXNativeTarget "AstroPic-WalETests" */;
+			buildPhases = (
+				B5549B9E27A51C1E005C8A8B /* Sources */,
+				B5549B9F27A51C1E005C8A8B /* Frameworks */,
+				B5549BA027A51C1E005C8A8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5549BA427A51C1E005C8A8B /* PBXTargetDependency */,
+			);
+			name = "AstroPic-WalETests";
+			productName = "AstroPic-WalETests";
+			productReference = B5549BA227A51C1E005C8A8B /* AstroPic-WalETests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B5549BAC27A51C1E005C8A8B /* AstroPic-WalEUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5549BBC27A51C1E005C8A8B /* Build configuration list for PBXNativeTarget "AstroPic-WalEUITests" */;
+			buildPhases = (
+				B5549BA927A51C1E005C8A8B /* Sources */,
+				B5549BAA27A51C1E005C8A8B /* Frameworks */,
+				B5549BAB27A51C1E005C8A8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5549BAF27A51C1E005C8A8B /* PBXTargetDependency */,
+			);
+			name = "AstroPic-WalEUITests";
+			productName = "AstroPic-WalEUITests";
+			productReference = B5549BAD27A51C1E005C8A8B /* AstroPic-WalEUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5549B8427A51C1C005C8A8B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					B5549B8B27A51C1C005C8A8B = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					B5549BA127A51C1E005C8A8B = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = B5549B8B27A51C1C005C8A8B;
+					};
+					B5549BAC27A51C1E005C8A8B = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = B5549B8B27A51C1C005C8A8B;
+					};
+				};
+			};
+			buildConfigurationList = B5549B8727A51C1C005C8A8B /* Build configuration list for PBXProject "AstroPic-WalE" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B5549B8327A51C1C005C8A8B;
+			productRefGroup = B5549B8D27A51C1C005C8A8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5549B8B27A51C1C005C8A8B /* AstroPic-WalE */,
+				B5549BA127A51C1E005C8A8B /* AstroPic-WalETests */,
+				B5549BAC27A51C1E005C8A8B /* AstroPic-WalEUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5549B8A27A51C1C005C8A8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5549B9C27A51C1D005C8A8B /* LaunchScreen.storyboard in Resources */,
+				B5549B9927A51C1D005C8A8B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5549BA027A51C1E005C8A8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5549BAB27A51C1E005C8A8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5549B8827A51C1C005C8A8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5549B9027A51C1C005C8A8B /* AppDelegate.swift in Sources */,
+				B5549B9227A51C1C005C8A8B /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5549B9E27A51C1E005C8A8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5549BA727A51C1E005C8A8B /* AstroPic_WalETests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5549BA927A51C1E005C8A8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5549BB227A51C1E005C8A8B /* AstroPic_WalEUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5549BA427A51C1E005C8A8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5549B8B27A51C1C005C8A8B /* AstroPic-WalE */;
+			targetProxy = B5549BA327A51C1E005C8A8B /* PBXContainerItemProxy */;
+		};
+		B5549BAF27A51C1E005C8A8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5549B8B27A51C1C005C8A8B /* AstroPic-WalE */;
+			targetProxy = B5549BAE27A51C1E005C8A8B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B5549B9A27A51C1D005C8A8B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5549B9B27A51C1D005C8A8B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B5549BB427A51C1E005C8A8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B5549BB527A51C1E005C8A8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B5549BB727A51C1E005C8A8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "AstroPic-WalE/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "pandeyneeraj.AstroPic-WalE";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B5549BB827A51C1E005C8A8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "AstroPic-WalE/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "pandeyneeraj.AstroPic-WalE";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B5549BBA27A51C1E005C8A8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "AstroPic-WalETests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "pandeyneeraj.AstroPic-WalETests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AstroPic-WalE.app/AstroPic-WalE";
+			};
+			name = Debug;
+		};
+		B5549BBB27A51C1E005C8A8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "AstroPic-WalETests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "pandeyneeraj.AstroPic-WalETests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AstroPic-WalE.app/AstroPic-WalE";
+			};
+			name = Release;
+		};
+		B5549BBD27A51C1E005C8A8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "AstroPic-WalEUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "pandeyneeraj.AstroPic-WalEUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "AstroPic-WalE";
+			};
+			name = Debug;
+		};
+		B5549BBE27A51C1E005C8A8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "AstroPic-WalEUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "pandeyneeraj.AstroPic-WalEUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "AstroPic-WalE";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5549B8727A51C1C005C8A8B /* Build configuration list for PBXProject "AstroPic-WalE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5549BB427A51C1E005C8A8B /* Debug */,
+				B5549BB527A51C1E005C8A8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5549BB627A51C1E005C8A8B /* Build configuration list for PBXNativeTarget "AstroPic-WalE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5549BB727A51C1E005C8A8B /* Debug */,
+				B5549BB827A51C1E005C8A8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5549BB927A51C1E005C8A8B /* Build configuration list for PBXNativeTarget "AstroPic-WalETests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5549BBA27A51C1E005C8A8B /* Debug */,
+				B5549BBB27A51C1E005C8A8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5549BBC27A51C1E005C8A8B /* Build configuration list for PBXNativeTarget "AstroPic-WalEUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5549BBD27A51C1E005C8A8B /* Debug */,
+				B5549BBE27A51C1E005C8A8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5549B8427A51C1C005C8A8B /* Project object */;
+}
