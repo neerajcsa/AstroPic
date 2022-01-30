@@ -13,6 +13,12 @@
 		B5549B9C27A51C1D005C8A8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5549B9A27A51C1D005C8A8B /* LaunchScreen.storyboard */; };
 		B5549BA727A51C1E005C8A8B /* AstroPic_WalETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5549BA627A51C1E005C8A8B /* AstroPic_WalETests.swift */; };
 		B5549BB227A51C1E005C8A8B /* AstroPic_WalEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5549BB127A51C1E005C8A8B /* AstroPic_WalEUITests.swift */; };
+		B5549BEC27A5AACE005C8A8B /* AstroPictureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5549BEB27A5AACE005C8A8B /* AstroPictureVC.swift */; };
+		B5549BF427A5ACD7005C8A8B /* AstroPicData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5549BF327A5ACD7005C8A8B /* AstroPicData.swift */; };
+		B5549BF927A5ADB8005C8A8B /* AstroPicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5549BF827A5ADB8005C8A8B /* AstroPicViewModel.swift */; };
+		B5549BFE27A5B02D005C8A8B /* APTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5549BFD27A5B02D005C8A8B /* APTitleLabel.swift */; };
+		B5549C1827A657A1005C8A8B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5549C1727A657A1005C8A8B /* NetworkManager.swift */; };
+		B5549C2027A657F5005C8A8B /* APDescriptionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5549C1F27A657F5005C8A8B /* APDescriptionLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,12 @@
 		B5549BAD27A51C1E005C8A8B /* AstroPic-WalEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AstroPic-WalEUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5549BB127A51C1E005C8A8B /* AstroPic_WalEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPic_WalEUITests.swift; sourceTree = "<group>"; };
 		B5549BB327A51C1E005C8A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5549BEB27A5AACE005C8A8B /* AstroPictureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPictureVC.swift; sourceTree = "<group>"; };
+		B5549BF327A5ACD7005C8A8B /* AstroPicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPicData.swift; sourceTree = "<group>"; };
+		B5549BF827A5ADB8005C8A8B /* AstroPicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroPicViewModel.swift; sourceTree = "<group>"; };
+		B5549BFD27A5B02D005C8A8B /* APTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APTitleLabel.swift; sourceTree = "<group>"; };
+		B5549C1727A657A1005C8A8B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B5549C1F27A657F5005C8A8B /* APDescriptionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APDescriptionLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +107,14 @@
 		B5549B8E27A51C1C005C8A8B /* AstroPic-WalE */ = {
 			isa = PBXGroup;
 			children = (
+				B5549C1627A6577A005C8A8B /* Network */,
+				B5549BF227A5AC6C005C8A8B /* View */,
+				B5549BF127A5AC64005C8A8B /* Model */,
+				B5549BF027A5AC5B005C8A8B /* ViewModel */,
+				B5549BE427A5AA83005C8A8B /* Resources */,
+				B5549BE327A5AA7C005C8A8B /* Controller */,
 				B5549B8F27A51C1C005C8A8B /* AppDelegate.swift */,
 				B5549B9127A51C1C005C8A8B /* SceneDelegate.swift */,
-				B5549B9827A51C1D005C8A8B /* Assets.xcassets */,
-				B5549B9A27A51C1D005C8A8B /* LaunchScreen.storyboard */,
 				B5549B9D27A51C1D005C8A8B /* Info.plist */,
 			);
 			path = "AstroPic-WalE";
@@ -120,6 +136,56 @@
 				B5549BB327A51C1E005C8A8B /* Info.plist */,
 			);
 			path = "AstroPic-WalEUITests";
+			sourceTree = "<group>";
+		};
+		B5549BE327A5AA7C005C8A8B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B5549BEB27A5AACE005C8A8B /* AstroPictureVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B5549BE427A5AA83005C8A8B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B5549B9827A51C1D005C8A8B /* Assets.xcassets */,
+				B5549B9A27A51C1D005C8A8B /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B5549BF027A5AC5B005C8A8B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B5549BF827A5ADB8005C8A8B /* AstroPicViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B5549BF127A5AC64005C8A8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5549BF327A5ACD7005C8A8B /* AstroPicData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B5549BF227A5AC6C005C8A8B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B5549BFD27A5B02D005C8A8B /* APTitleLabel.swift */,
+				B5549C1F27A657F5005C8A8B /* APDescriptionLabel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B5549C1627A6577A005C8A8B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B5549C1727A657A1005C8A8B /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,7 +317,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5549C2027A657F5005C8A8B /* APDescriptionLabel.swift in Sources */,
+				B5549BFE27A5B02D005C8A8B /* APTitleLabel.swift in Sources */,
+				B5549BF427A5ACD7005C8A8B /* AstroPicData.swift in Sources */,
 				B5549B9027A51C1C005C8A8B /* AppDelegate.swift in Sources */,
+				B5549C1827A657A1005C8A8B /* NetworkManager.swift in Sources */,
+				B5549BEC27A5AACE005C8A8B /* AstroPictureVC.swift in Sources */,
+				B5549BF927A5ADB8005C8A8B /* AstroPicViewModel.swift in Sources */,
 				B5549B9227A51C1C005C8A8B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
