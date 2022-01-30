@@ -120,11 +120,12 @@ class AstroPictureVC: UIViewController, AstroPicErrorDelegate {
     
     
     func displayError(error: APError) {
+        self.dismissLoadingView()
+
         //display error
         DispatchQueue.main.async {
             let title = "Network Error"
             let message = "There was an error while fetching Image.\n \(error.localizedDescription)"
-            self.dismissLoadingView()
             self.displayErrorAlert(title: title, message: message)
         }
     }

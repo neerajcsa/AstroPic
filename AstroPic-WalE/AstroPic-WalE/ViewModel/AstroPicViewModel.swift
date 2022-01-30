@@ -31,22 +31,22 @@ class AstroPicViewModel : NSObject {
         let cacheKey = Utility.shared.getCurrentDate(date: Date())
         let dicAstroPic = UserDefaults.standard.value(forKey: cacheKey) as? [String:String]  ?? [:]
         
-        if !dicAstroPic.keys.isEmpty {
-            self.setAstroPicData(dicAstroPic : dicAstroPic)
-        } else {
-            callServiceToGetAstroPicData()
+        DispatchQueue.global(qos: .background).async {
+            if !dicAstroPic.keys.isEmpty {
+                self.setAstroPicData(dicAstroPic : dicAstroPic)
+            } else {
+                self.callServiceToGetAstroPicData()
+            }
         }
     }
     
     private func setAstroPicData(dicAstroPic : [String : String]) {
-        DispatchQueue.global(qos: .background).async {
-            let title = dicAstroPic["title"] ?? ""
-            let explanation = dicAstroPic["explanation"] ?? ""
-            let url = dicAstroPic["url"] ?? ""
-            
-            let astroPicData = AstroPicData(explanation: explanation, title: title, url: url)
-            self.astroPicData = astroPicData
-        }
+        let title = dicAstroPic["title"] ?? ""
+        let explanation = dicAstroPic["explanation"] ?? ""
+        let url = dicAstroPic["url"] ?? ""
+        
+        let astroPicData = AstroPicData(explanation: explanation, title: title, url: url)
+        self.astroPicData = astroPicData
     }
     
     private func callServiceToGetAstroPicData() {
