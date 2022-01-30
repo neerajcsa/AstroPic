@@ -19,13 +19,11 @@ class NetworkChecker {
         monitor.pathUpdateHandler = { path in
             
             if path.status == .satisfied {
-                DispatchQueue.main.async {
-                    appDelegate.isNetworkAvailable = true
-                }
+                debugPrint("network available")
+                NetworkManager.shared.isNetworkAvailable = true
             } else {
-                DispatchQueue.main.async {
-                    appDelegate.isNetworkAvailable = false
-                }
+                debugPrint("network not available")
+                NetworkManager.shared.isNetworkAvailable = false
             }
         }
         

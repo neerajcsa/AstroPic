@@ -23,6 +23,8 @@ class NetworkManager {
     
     static let shared = NetworkManager()
     
+    var isNetworkAvailable : Bool = false
+    
     private init() { }
         
     func getAstroPicDetails(apiKey : String, completionHandler : @escaping (Result<AstroPicData, APError>) -> Void) {
@@ -30,6 +32,11 @@ class NetworkManager {
         
         guard let url = URL(string: endpoints) else {
             completionHandler(.failure(.invalidURL))
+            return
+        }
+        
+        guard isNetworkAvailable else {
+            completionHandler(.failure(.unableToComplete))
             return
         }
         
@@ -72,7 +79,15 @@ class NetworkManager {
             return
         }
         
-        guard let url = URL(string: urlString) else { return }
+        guard isNetworkAvailable else {
+            completionHandler(.failure(.unableToComplete))
+            return
+        }
+        
+        guard let url = URL(string: urlString) else {
+            completionHandler(.failure(.invalidURL))
+            return
+        }
         
         let task = URLSession.shared.dataTask(with: url) {[weak self] (data, response, error) in
             guard let self = self else { return }
@@ -109,8 +124,17 @@ class NetworkManager {
     private func cacheImageData(for cacheKey : String, imageData : Data) {
         let fileName = cacheKey
         let docDirectory = Utility.shared.getDocumentDirectoryPath()
-        let fileURL = docDirectory.appendingPathComponent(cacheKey).appendingPathComponent(fileName).appendingPathExtension("png")
+        var fileURL = docDirectory.appendingPathComponent(cacheKey)
+        if !FileManager.default.fileExists(atPath: fileURL.path) {
+            //create directory
+            do {
+                try FileManager.default.createDirectory(at: fileURL, withIntermediateDirectories: false, attributes: nil)
+            } catch let error {
+                debugPrint("There was an error while creating directory. \(error.localizedDescription)")
+            }
+        }
         
+        fileURL = fileURL.appendingPathComponent(fileName).appendingPathExtension("png")
         Utility.shared.writeToDocumentDirectory(fileURL: fileURL, data: imageData)
     }
     

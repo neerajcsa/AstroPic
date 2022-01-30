@@ -64,7 +64,9 @@ class AstroPictureVC: UIViewController, AstroPicErrorDelegate {
     }
     
     private func callToViewModelForUpdateUI() {
+        //Show activity indicator
         showLoadingView()
+        
         self.astroPicViewModel = AstroPicViewModel()
         self.astroPicViewModel.delegate = self
         
@@ -76,6 +78,7 @@ class AstroPictureVC: UIViewController, AstroPicErrorDelegate {
             let group = DispatchGroup()
             DispatchQueue.global(qos: .background).async {
                 NetworkManager.shared.downloadImage(from: self.astroPicViewModel.astroPicData.url) { result in
+                    group.leave()
                     switch result {
                     
                     case .success(let image):
@@ -94,8 +97,6 @@ class AstroPictureVC: UIViewController, AstroPicErrorDelegate {
                         }
                     }
                 }
-                
-                group.leave()
             }
             
             group.enter()
@@ -108,6 +109,7 @@ class AstroPictureVC: UIViewController, AstroPicErrorDelegate {
     }
     
     private func updateImageView(with image : UIImage) {
+        self.astroImageView.isHidden = false
         self.astroImageView.image = image
     }
     
