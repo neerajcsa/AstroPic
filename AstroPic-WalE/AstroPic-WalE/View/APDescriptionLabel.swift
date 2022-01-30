@@ -17,13 +17,15 @@ class APDescriptionLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(fontSize : CGFloat) {
+    init(alignment : NSTextAlignment, fontSize : CGFloat) {
         super.init(frame: .zero)
-        font = UIFont.systemFont(ofSize: fontSize, weight: .regular)
+        self.textAlignment = alignment
+        self.font = UIFont.systemFont(ofSize: fontSize, weight: .medium)
         configure()
     }
 
     private func configure() {
+        sizeToFit()
         textColor = .secondaryLabel
         adjustsFontSizeToFitWidth = true
         lineBreakMode = .byTruncatingTail

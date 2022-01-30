@@ -19,6 +19,7 @@
 		B5549BFE27A5B02D005C8A8B /* APTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5549BFD27A5B02D005C8A8B /* APTitleLabel.swift */; };
 		B5549C1827A657A1005C8A8B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5549C1727A657A1005C8A8B /* NetworkManager.swift */; };
 		B5549C2027A657F5005C8A8B /* APDescriptionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5549C1F27A657F5005C8A8B /* APDescriptionLabel.swift */; };
+		B5549C2527A65CDE005C8A8B /* APAstroImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5549C2427A65CDE005C8A8B /* APAstroImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		B5549BFD27A5B02D005C8A8B /* APTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APTitleLabel.swift; sourceTree = "<group>"; };
 		B5549C1727A657A1005C8A8B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B5549C1F27A657F5005C8A8B /* APDescriptionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APDescriptionLabel.swift; sourceTree = "<group>"; };
+		B5549C2427A65CDE005C8A8B /* APAstroImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APAstroImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			children = (
 				B5549BFD27A5B02D005C8A8B /* APTitleLabel.swift */,
 				B5549C1F27A657F5005C8A8B /* APDescriptionLabel.swift */,
+				B5549C2427A65CDE005C8A8B /* APAstroImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				B5549C1827A657A1005C8A8B /* NetworkManager.swift in Sources */,
 				B5549BEC27A5AACE005C8A8B /* AstroPictureVC.swift in Sources */,
 				B5549BF927A5ADB8005C8A8B /* AstroPicViewModel.swift in Sources */,
+				B5549C2527A65CDE005C8A8B /* APAstroImageView.swift in Sources */,
 				B5549B9227A51C1C005C8A8B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
