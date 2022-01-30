@@ -7,28 +7,32 @@
 
 import Foundation
 
-protocol AstroPicViewModelDelegate {
-    var title : String { get set }
-    var url : String { get set }
-    var explanation : String { get set }
-}
-
-struct AstroPicViewModel : AstroPicViewModelDelegate {
-    var astroPicData : AstroPicData
+class AstroPicViewModel : NSObject {
     
-    var title: String
+    private(set) var astroPicData : AstroPicData! {
+        didSet {
+            self.bindAstroPicViewModelToController()
+        }
+    }
     
-    var url: String
-    
-    var explanation: String
+    var bindAstroPicViewModelToController : (() -> ()) = { }
     
     //MARK: Initialization
     
-    init(astroPicData : AstroPicData) {
-        self.astroPicData = astroPicData
-        
-        self.title = astroPicData.title
-        self.url = astroPicData.url
-        self.explanation = astroPicData.explanation
+    override init() {
+        super.init()
+        callServiceToGetAstroPicData()
+    }
+    
+    private func callServiceToGetAstroPicData() {
+        NetworkManager.shared.getAstroPicDetails(apiKey: Endpoints.apiKey) { result in
+            
+            switch result {
+            case .success(let astroPicData):
+                self.astroPicData = astroPicData
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }

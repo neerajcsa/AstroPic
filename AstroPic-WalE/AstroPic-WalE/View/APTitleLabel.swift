@@ -26,7 +26,6 @@ class APTitleLabel: UILabel {
 
     private func configure() {
         textColor = .label
-        adjustsFontSizeToFitWidth = true
         lineBreakMode = .byTruncatingTail
         translatesAutoresizingMaskIntoConstraints = false
     }

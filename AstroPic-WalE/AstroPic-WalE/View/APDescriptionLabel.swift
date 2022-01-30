@@ -27,7 +27,7 @@ class APDescriptionLabel: UILabel {
     private func configure() {
         sizeToFit()
         textColor = .secondaryLabel
-        adjustsFontSizeToFitWidth = true
+        numberOfLines = 0
         lineBreakMode = .byTruncatingTail
         translatesAutoresizingMaskIntoConstraints = false
     }
