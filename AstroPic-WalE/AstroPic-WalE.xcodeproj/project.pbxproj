@@ -20,6 +20,9 @@
 		B5549C1827A657A1005C8A8B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5549C1727A657A1005C8A8B /* NetworkManager.swift */; };
 		B5549C2027A657F5005C8A8B /* APDescriptionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5549C1F27A657F5005C8A8B /* APDescriptionLabel.swift */; };
 		B5549C2527A65CDE005C8A8B /* APAstroImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5549C2427A65CDE005C8A8B /* APAstroImageView.swift */; };
+		B5549C3927A69EC5005C8A8B /* NetworkChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5549C3827A69EC5005C8A8B /* NetworkChecker.swift */; };
+		B5549C3F27A6AA41005C8A8B /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5549C3E27A6AA41005C8A8B /* UIViewController+Ext.swift */; };
+		B5549C4527A6AECA005C8A8B /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5549C4427A6AECA005C8A8B /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		B5549C1727A657A1005C8A8B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B5549C1F27A657F5005C8A8B /* APDescriptionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APDescriptionLabel.swift; sourceTree = "<group>"; };
 		B5549C2427A65CDE005C8A8B /* APAstroImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APAstroImageView.swift; sourceTree = "<group>"; };
+		B5549C3827A69EC5005C8A8B /* NetworkChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkChecker.swift; sourceTree = "<group>"; };
+		B5549C3E27A6AA41005C8A8B /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		B5549C4427A6AECA005C8A8B /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,8 @@
 		B5549B8E27A51C1C005C8A8B /* AstroPic-WalE */ = {
 			isa = PBXGroup;
 			children = (
+				B5549C4327A6AE9F005C8A8B /* Utility */,
+				B5549C3D27A6AA1C005C8A8B /* Extension */,
 				B5549C1627A6577A005C8A8B /* Network */,
 				B5549BF227A5AC6C005C8A8B /* View */,
 				B5549BF127A5AC64005C8A8B /* Model */,
@@ -187,8 +195,25 @@
 			isa = PBXGroup;
 			children = (
 				B5549C1727A657A1005C8A8B /* NetworkManager.swift */,
+				B5549C3827A69EC5005C8A8B /* NetworkChecker.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		B5549C3D27A6AA1C005C8A8B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B5549C3E27A6AA41005C8A8B /* UIViewController+Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B5549C4327A6AE9F005C8A8B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				B5549C4427A6AECA005C8A8B /* Utility.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,10 +347,13 @@
 			files = (
 				B5549C2027A657F5005C8A8B /* APDescriptionLabel.swift in Sources */,
 				B5549BFE27A5B02D005C8A8B /* APTitleLabel.swift in Sources */,
+				B5549C3927A69EC5005C8A8B /* NetworkChecker.swift in Sources */,
+				B5549C3F27A6AA41005C8A8B /* UIViewController+Ext.swift in Sources */,
 				B5549BF427A5ACD7005C8A8B /* AstroPicData.swift in Sources */,
 				B5549B9027A51C1C005C8A8B /* AppDelegate.swift in Sources */,
 				B5549C1827A657A1005C8A8B /* NetworkManager.swift in Sources */,
 				B5549BEC27A5AACE005C8A8B /* AstroPictureVC.swift in Sources */,
+				B5549C4527A6AECA005C8A8B /* Utility.swift in Sources */,
 				B5549BF927A5ADB8005C8A8B /* AstroPicViewModel.swift in Sources */,
 				B5549C2527A65CDE005C8A8B /* APAstroImageView.swift in Sources */,
 				B5549B9227A51C1C005C8A8B /* SceneDelegate.swift in Sources */,

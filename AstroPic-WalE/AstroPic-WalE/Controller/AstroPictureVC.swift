@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AstroPictureVC: UIViewController {
+class AstroPictureVC: UIViewController, AstroPicErrorDelegate {
     
     let astroImageView = APAstroImageView(frame: .zero)
     let astroTitle = APTitleLabel(alignment: .center, fontSize: 16)
@@ -17,32 +17,12 @@ class AstroPictureVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         configureViewController()
         configureAstroImageView()
         configureAstroTitleLabel()
         configureAstroDescriptionLabel()
         callToViewModelForUpdateUI()
-    }
-    
-    private func callToViewModelForUpdateUI() {
-        self.astroPicViewModel = AstroPicViewModel()
-        self.astroPicViewModel.bindAstroPicViewModelToController = { [weak self] in
-            guard let self = self else {
-                return
-            }
-            
-            DispatchQueue.main.async {
-                self.updateUI()
-            }
-        }
-    }
-    
-    private func updateUI() {
-        self.astroImageView.downloadImage(from: self.astroPicViewModel.astroPicData.url)
-        self.astroTitle.text = self.astroPicViewModel.astroPicData.title
-        self.astroDescription.text = self.astroPicViewModel.astroPicData.explanation
     }
     
     private func configureViewController() {
@@ -83,4 +63,68 @@ class AstroPictureVC: UIViewController {
         ])
     }
     
+    private func callToViewModelForUpdateUI() {
+        showLoadingView()
+        self.astroPicViewModel = AstroPicViewModel()
+        self.astroPicViewModel.delegate = self
+        
+        self.astroPicViewModel.bindAstroPicViewModelToController = { [weak self] in
+            guard let self = self else {
+                return
+            }
+            
+            let group = DispatchGroup()
+            DispatchQueue.global(qos: .background).async {
+                NetworkManager.shared.downloadImage(from: self.astroPicViewModel.astroPicData.url) { result in
+                    switch result {
+                    
+                    case .success(let image):
+                        //Update UI on main thread
+                        DispatchQueue.main.async { [weak self] in
+                            guard let self = self else { return }
+                            self.updateImageView(with: image)
+                            self.updateLabels()
+                        }
+                    case .failure(let error):
+                        //display error
+                        DispatchQueue.main.async {
+                            let title = "Error"
+                            let message = "There was an error while fetching Image.\n \(error.localizedDescription)"
+                            self.displayErrorAlert(title: title, message: message)
+                        }
+                    }
+                }
+                
+                group.leave()
+            }
+            
+            group.enter()
+            
+            group.notify(queue: .main) {
+                self.dismissLoadingView()
+            }
+                    
+        }
+    }
+    
+    private func updateImageView(with image : UIImage) {
+        self.astroImageView.image = image
+    }
+    
+    private func updateLabels() {
+        self.astroTitle.text = self.astroPicViewModel.astroPicData.title
+        self.astroDescription.text = self.astroPicViewModel.astroPicData.explanation
+    }
+    
+    
+    func displayError(error: APError) {
+        //display error
+        DispatchQueue.main.async {
+            let title = "Network Error"
+            let message = "There was an error while fetching Image.\n \(error.localizedDescription)"
+            self.dismissLoadingView()
+            self.displayErrorAlert(title: title, message: message)
+        }
+    }
 }
+

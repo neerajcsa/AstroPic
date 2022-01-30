@@ -24,9 +24,7 @@ class NetworkManager {
     static let shared = NetworkManager()
     
     private init() { }
-    
-    let cache = NSCache<NSString, UIImage>()
-    
+        
     func getAstroPicDetails(apiKey : String, completionHandler : @escaping (Result<AstroPicData, APError>) -> Void) {
         let endpoints = Endpoints.baseApi + "?api_key=\(apiKey)"
         
@@ -65,4 +63,68 @@ class NetworkManager {
         task.resume()
     }
     
+    func downloadImage(from urlString : String, completionHandler : @escaping (Result<UIImage, APError>) -> Void) {
+        
+        let cacheKey = Utility.shared.getCurrentDate(date: Date())
+
+        if let image = getCachedImage(cacheKey: cacheKey) {
+            completionHandler(.success(image))
+            return
+        }
+        
+        guard let url = URL(string: urlString) else { return }
+        
+        let task = URLSession.shared.dataTask(with: url) {[weak self] (data, response, error) in
+            guard let self = self else { return }
+            
+            if error != nil {
+                completionHandler(.failure(.invalidResponse))
+                return
+            }
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                completionHandler(.failure(.invalidResponse))
+                return
+            }
+            
+            guard let data = data else {
+                completionHandler(.failure(.invalidData))
+                return
+            }
+            
+            guard let image = UIImage(data: data) else {
+                completionHandler(.failure(.invalidData))
+                return
+            }
+            
+            DispatchQueue.global(qos: .background).async {
+                self.cacheImageData(for: cacheKey, imageData: data)
+            }
+            
+            completionHandler(.success(image))
+        }
+        
+        task.resume()
+    }
+
+    private func cacheImageData(for cacheKey : String, imageData : Data) {
+        let fileName = cacheKey
+        let docDirectory = Utility.shared.getDocumentDirectoryPath()
+        let fileURL = docDirectory.appendingPathComponent(cacheKey).appendingPathComponent(fileName).appendingPathExtension("png")
+        
+        Utility.shared.writeToDocumentDirectory(fileURL: fileURL, data: imageData)
+    }
+    
+    private func getCachedImage(cacheKey : String) -> UIImage? {
+        let fileName = cacheKey
+        let docDirectory = Utility.shared.getDocumentDirectoryPath()
+        let fileURL = docDirectory.appendingPathComponent(cacheKey).appendingPathComponent(fileName).appendingPathExtension("png")
+        
+        if FileManager.default.fileExists(atPath: fileURL.path) {
+            return Utility.shared.getImageDataFromDocumentDirectory(fileURL: fileURL)
+        }
+        
+        return nil
+    }
+    
+        
 }

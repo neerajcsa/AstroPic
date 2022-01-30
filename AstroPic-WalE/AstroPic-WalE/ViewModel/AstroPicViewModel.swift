@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol AstroPicErrorDelegate : AnyObject {
+    func displayError(error : APError)
+}
+
 class AstroPicViewModel : NSObject {
     
     private(set) var astroPicData : AstroPicData! {
@@ -15,12 +19,15 @@ class AstroPicViewModel : NSObject {
         }
     }
     
+    weak var delegate : AstroPicErrorDelegate?
+    
     var bindAstroPicViewModelToController : (() -> ()) = { }
     
     //MARK: Initialization
     
     override init() {
         super.init()
+        
         callServiceToGetAstroPicData()
     }
     
@@ -31,7 +38,7 @@ class AstroPicViewModel : NSObject {
             case .success(let astroPicData):
                 self.astroPicData = astroPicData
             case .failure(let error):
-                print(error)
+                self.delegate?.displayError(error: error)
             }
         }
     }
